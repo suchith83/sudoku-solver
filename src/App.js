@@ -3,7 +3,7 @@ import SudokuGrid from './components/sudokuGrid';
 import UploadImage from './components/uploadimage';
 import SolverControls from './components/solverControls';
 import { createEmptyGrid, solveSudoku } from './utils/sudokuSolver';
-import { extractSudokuGridFromImage } from './utils/ocr';
+import { extractDigits } from './utils/ocr';
 
 function App() {
   const [grid, setGrid] = useState(createEmptyGrid());
@@ -35,7 +35,7 @@ function App() {
 
   // When image file is selected, extract grid and set
   const handleFileSelected = async file => {
-    const extractedGrid = await extractSudokuGridFromImage(file);
+    const extractedGrid = await extractDigits(file);
     if (extractedGrid) setGrid(extractedGrid);
     else alert('Failed to extract Sudoku grid from image.');
   };
