@@ -35,4 +35,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 =======
 # sudoku-solver
 upload the image of sudoku and it will solve it for you.
->>>>>>> b078106258ed5fa3d0b5cbe1aae83fe915348417
+
+# It is still in development.
